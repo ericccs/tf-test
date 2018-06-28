@@ -1,4 +1,4 @@
-The aim of this exercise is to develop a react application where we can display the data of the top 5 cryptocurrency in the market. This package contains some code that can be used as a starting point to develop the application. You are expected to enhance this starter package to produce a working application. To develop the application, you'll need to install nodejs which can be downloaded from https://nodejs.org/en/download/. Please send the completed solution in a zip file including all the solution files and folders without the node_modules folder.
+The aim of these exercises is to develop a react application where we can display the data of the top 5 cryptocurrency in the market. This package contains some code that can be used as a starting point to develop the application. You are expected to enhance this starter package to produce a working application. To develop the application, you'll need to install nodejs which can be downloaded from https://nodejs.org/en/download/. Please send the completed solution in a zip file including all the solution files and folders without the node_modules folder.
 
 After we receive your completed solution, to assess the solution, we'll do the followings:
     1. Unzip the zip file containing your solution to a folder
@@ -11,7 +11,7 @@ Please make sure before you send your final solution, you've tried the above ste
 Exercise 1.
 After you install nodejs, run npm install to install the dependencies from the folder where package.json resides.
 To start the development server, you can run npm start from the folder where package.json resides.
-When you start the development server, you'll see a compile error. Please see if you can fix the code have the starter application running.
+When you start the development server, you'll see a compile error. Please see if you can fix the code and have the starter application running.
 
 Once you have fixed the compile error, you should see a page displaying a cryptocurrency, its price and the percentage change in the last 24 hours using a mock test data.
 
@@ -30,7 +30,7 @@ Please enhance the application to add a dropdown to the page with the following 
 Again when updating/creating the react component(s) to achieve the above, please demonstrate that you're following react's best practices.
 
 Exercise 4.
-Now that you've a working application where users can see the top 5 cryptocurrency in the market and change the currency, it's time to improve the look & feel of the application.
+Now that you've a working application where users can see the top 5 cryptocurrency in the market and able to change the currency, it's time to improve the look & feel of the application.
 
 Improve the UI using CSS. For example, change the percentage box background to green if the value is positive and to red if negative and other improvements that you can think of to make the application stands out from the rest.
 

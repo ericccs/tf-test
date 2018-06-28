@@ -8,7 +8,6 @@ const css = require('./CryptoCcyList.css');
 
 export default class CryptoCcyList extends React.Component {
     constructor() {
-        super();
         this.state = {};
     }
 

@@ -30,11 +30,14 @@ export default class CryptoCcyList extends React.Component {
     render() {
         const element = this.state.cryptoList.map(data => {
             const price = numeral(data["price_" + this.state.activeCcy.toLowerCase()]).format('0,0.00');
+            const priceStyle = data.percent_change_24h >= 0
+                ? css.cryptoChange + ' ' + css.cryptoLabel + ' ' + css.cryptoLabelUp
+                : css.cryptoChange + ' ' + css.cryptoLabel + ' ' + css.cryptoLabelDown;
             return (
                 <div key={data.id} className={css.cryptoRow}>
                     <div className={css.cryptoName}>{data.name}</div>
                     <div className={css.cryptoPrice}>{`${this.state.activeCcy} ${price}`}</div>
-                    <div className={css.cryptoChange}>{`${data.percent_change_24h}%`}</div>
+                    <div className={priceStyle}>{`${data.percent_change_24h}%`}</div>
                 </div>
             );
         });
@@ -63,7 +66,7 @@ export default class CryptoCcyList extends React.Component {
 
     updateCryptoData(displayCcy) {
         getCryptoData(displayCcy).then(res => {
-            console.log("ccy: " + displayCcy + ", res: " + res);
+            console.log("ccy: " + displayCcy + ", res: ", res);
             this.setState({ cryptoList: res, activeCcy: displayCcy });
         }).catch(err => {
             console.log("Error: ", err);

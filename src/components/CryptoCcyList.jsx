@@ -8,21 +8,21 @@ import CcySelector from './CcySelector';
 const css = require('./CryptoCcyList.css');
 
 
-const CCY_LIST = [
-    { name: "SGD" },
-    { name: "AUD" },
-    { name: "EUR" },
-    { name: "GBP" },
-    { name: "USD" },
-    { name: "VND" }
-];
 
 export default class CryptoCcyList extends React.Component {
     constructor() {
         super();
         this.state = {
             cryptoList: [],
-            activeCcy: 'SGD'
+            activeCcy: 'SGD',
+            ccyList: [
+                { name: "SGD" },
+                { name: "AUD" },
+                { name: "EUR" },
+                { name: "GBP" },
+                { name: "USD" },
+                { name: "VND" }
+            ]
         };
         this.selectCcy = this.selectCcy.bind(this);
     }
@@ -44,7 +44,7 @@ export default class CryptoCcyList extends React.Component {
 
         return (
             <div align="center">
-                <CcySelector ccyList={CCY_LIST} activeCcy={this.state.activeCcy} handleCcyChange={this.selectCcy}/>
+                <CcySelector ccyList={this.state.ccyList} activeCcy={this.state.activeCcy} handleCcyChange={this.selectCcy}/>
                 {element}
             </div>
 

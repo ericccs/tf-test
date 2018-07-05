@@ -28,11 +28,10 @@ export default class CryptoCcyList extends React.Component {
     }
 
     render() {
-        const element = this.state.cryptoList.map(data => {
+        const element = this.state.cryptoList.map((data, idx) => {
             const price = numeral(data["price_" + this.state.activeCcy.toLowerCase()]).format('0,0.00');
-            const priceStyle = data.percent_change_24h >= 0
-                ? css.cryptoChange + ' ' + css.cryptoLabel + ' ' + css.cryptoLabelUp
-                : css.cryptoChange + ' ' + css.cryptoLabel + ' ' + css.cryptoLabelDown;
+            const priceStyle = css.cryptoChange + ' ' + css.cryptoLabel + ' '
+                + (data.percent_change_24h >= 0 ? css.cryptoLabelUp : css.cryptoLabelDown);
             return (
                 <div key={data.id} className={css.cryptoRow}>
                     <div className={css.cryptoName}>{data.name}</div>
